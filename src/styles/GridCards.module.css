@@ -1,0 +1,59 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.item {
+  align-self: center;
+  justify-self: center;
+  padding: 1.5rem;
+}
+.card {
+  background-color: #f2f8f8;
+  font-family: "Pangolin", cursive;
+}
+.statusAlive {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+.statusDead {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+.statusUnknow {
+  width: 10px;
+  height: 10px;
+  background-color: orange;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+.containerTitle {
+  display: flex;
+  justify-content: center;
+}
+.title {
+  border-radius: 1.2rem;
+  color: #eef0f0;
+  background-color: #9db09c;
+  padding: 1.3rem;
+  margin-top: 1.7rem;
+}
+.cardText {
+  margin: 0;
+}
+.cardSelected {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+}

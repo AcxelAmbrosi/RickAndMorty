@@ -1,0 +1,14 @@
+.container {
+  height: 100px;
+}
+.cabecera {
+  font-size: 1.3rem;
+  padding-top: 20px;
+  color: white;
+}
+.parrafos {
+  color: aliceblue;
+}
+.backFoot {
+  background-color: #314247;
+}
