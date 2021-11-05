@@ -10,7 +10,7 @@ export const Footer = () => {
             <p className={Styles.cabecera}>CONTACTO:</p>
             <p className={Styles.parrafos}>El Oro - Santa Rosa</p>
             <p className={Styles.parrafos}> Correo: acxelandres@outlook.com</p>
-            <p className={Styles.parrafos}>Telefono:0990321227</p>
+            <p className={Styles.parrafos}>Telefono: 0990321227</p>
           </div>
         </div>
       </div>

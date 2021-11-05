@@ -2,10 +2,17 @@ import { CardLocation } from "./CardLocation";
 import { useFetchLocations } from "../../hook/useFetchLocations";
 import Styles from "../../styles/GridCards.module.css";
 import { Pagination } from "../Pagination";
+import { useState } from "react";
+import { ModalLocations } from "./ModalLocations";
 
 export const GridCardsLocations = () => {
   const [info, state, changeRoute] = useFetchLocations();
+  const [click, setClick] = useState(false);
+  const [stateModal, setStateModal] = useState([]);
 
+  const handleClick = () => {
+    setClick(!click);
+  };
   const handleClickNext = () => {
     changeRoute("next");
   };
@@ -15,11 +22,23 @@ export const GridCardsLocations = () => {
   return (
     <>
       <div className={Styles.containerTitle}>
-        <h1 className={Styles.title}>CHARACTERS</h1>
+        <h1 className={Styles.title}>LOCATIONS</h1>
       </div>
       <div className={Styles.container}>
-        <CardLocation state={state} />
+        {state.map((res) => {
+          return (
+            <CardLocation
+              key={res.id}
+              state={res}
+              modal={(state) => {
+                setStateModal(state);
+              }}
+              handleClick={handleClick}
+            />
+          );
+        })}
       </div>
+      {click === true && <ModalLocations state={stateModal} setStateModal={handleClick} />}
       <Pagination info={info} handleNext={handleClickNext} handlePrevious={handleClickPrevious} />
     </>
   );

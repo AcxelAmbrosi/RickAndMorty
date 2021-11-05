@@ -1,21 +1,27 @@
 import React from "react";
 import Styles from "../../styles/GridCards.module.css";
-export const CardEpisode = ({ state }) => {
+import Image from "../../images/world_img.png";
+
+export const CardEpisode = ({ state, modal, handleClick }) => {
   return (
     <>
-      {state.map((res) => {
-        return (
-          <div className={Styles.item} key={res.id}>
-            <div className="card" style={{ width: "18rem" }}>
-              <div className={` ${Styles.card} card-body`}>
-                <h5 className="card-title">{res.name}</h5>
-                <p className={`${Styles.cardText} card-text`}>{`Air_date: ${res.air_date}`}</p>
-                <p className={`${Styles.cardText} card-text`}>{`Episode: ${res.episode}`}</p>
-              </div>
-            </div>
+      <div
+        className={` ${Styles.mar} card border`}
+        style={{ width: "18rem" }}
+        onClick={() => {
+          modal(state);
+          handleClick();
+        }}
+      >
+        <img className={`rounded`} src={Image} alt={state.name} />
+        <div className="card" style={{ width: "18rem" }}>
+          <div className={` ${Styles.card} card-body`}>
+            <h5 className="card-title">{state.name}</h5>
+            <p className={`${Styles.cardText} card-text`}>{`Air_date: ${state.air_date}`}</p>
+            <p className={`${Styles.cardText} card-text`}>{`Episode: ${state.episode}`}</p>
           </div>
-        );
-      })}
+        </div>
+      </div>
     </>
   );
 };

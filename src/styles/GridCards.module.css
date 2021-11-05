@@ -1,16 +1,17 @@
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
 }
-.item {
-  align-self: center;
-  justify-self: center;
-  padding: 1.5rem;
+.mar {
+  margin: 40px;
 }
+
 .card {
   background-color: #f2f8f8;
   font-family: "Pangolin", cursive;
 }
+
 .statusAlive {
   width: 10px;
   height: 10px;
@@ -41,19 +42,21 @@
 .containerTitle {
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 .title {
   border-radius: 1.2rem;
   color: #eef0f0;
   background-color: #9db09c;
   padding: 1.3rem;
-  margin-top: 1.7rem;
+  margin: 1.5rem auto 1.5rem;
 }
 .cardText {
   margin: 0;
+  padding: 4px;
 }
-.cardSelected {
-  height: 100px;
-  width: 100px;
-  background-color: blue;
+.selected {
+  height: 10px;
+  width: 10px;
+  background-color: brown;
 }
