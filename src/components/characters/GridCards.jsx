@@ -1,12 +1,12 @@
 import { Card } from "./Card";
-import { useFetch } from "../../hook/useFetch";
 import Styles from "../../styles/GridCards.module.css";
 import { Pagination } from "../Pagination";
 import { useState } from "react";
 import { ModalCharacter } from "./ModalCharacter";
+import { useFetchCharacters } from "../../hook/useFetchCharacters";
 
 export const GridCards = () => {
-  const [info, state, changeRoute] = useFetch();
+  const [info, state, changeRoute] = useFetchCharacters();
   const [click, setClick] = useState(false);
   const [stateModal, setStateModal] = useState([]);
 

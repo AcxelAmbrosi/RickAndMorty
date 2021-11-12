@@ -4,6 +4,8 @@ import { Modals } from "../Modals";
 import { Status } from "./Status";
 
 export const ModalCharacter = ({ state, setStateModal }) => {
+  const direccion = `${state.origin.url}`;
+  console.log(direccion);
   return (
     <Modals title={state.name} setStateModal={setStateModal}>
       <div className={`${Style.modals_container}`}>
@@ -22,7 +24,9 @@ export const ModalCharacter = ({ state, setStateModal }) => {
           </div>
           <div className={`${Style.cardText} card-text`}>
             <p className={`${Style.cardText} card-text`}>Location:</p>
-            <button className="btn btn-success">{state.location.name}</button>
+            <button to="/locations" className="btn btn-success">
+              {state.location.name}
+            </button>
           </div>
         </div>
       </div>

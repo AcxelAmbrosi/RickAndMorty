@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useFetch = () => {
+export const useFetchCharacters = () => {
   const [state, setState] = useState([]);
   const [info, setInfo] = useState([]);
   const [route, setRoute] = useState("https://rickandmortyapi.com/api/character?");
